@@ -7,7 +7,8 @@ vm:
       init_img: vios_initv2
     csr:
       flavor: csr1000v.small
-      image: csr1000v-16.12.02
+      image: csr1000v-16.09.04
+#        csr1000v-16.12.02
 
   server:
     flavor: centos.small
@@ -40,7 +41,7 @@ servers:
 
 networks:
   1:
-    ipv4: 192.168.10.0/24
+    ipv4: 192.168.101.0/24
   2:
     ipv4: 10.131.11.0/24
   3:
@@ -50,9 +51,9 @@ networks:
   5:
     ipv4: 172.16.10.0/24
   6:
-    ipv4: 192.168.30.0/24
+    ipv4: 192.168.103.0/24
   7:
-    ipv4: 192.168.20.0/24
+    ipv4: 192.168.102.0/24
   # 8:
   #   ipv4: 10.131.8.0/24
   # # link9:

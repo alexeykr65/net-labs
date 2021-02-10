@@ -3,6 +3,8 @@
 !*.yaml
 !labs.graffle
 !oslabs.yml
+!create_stacks.sh
+
 
 
 

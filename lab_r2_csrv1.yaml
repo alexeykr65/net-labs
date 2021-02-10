@@ -7,7 +7,7 @@ vm:
       init_img: vios_initv2
     csr:
       flavor: csr1000v.small
-      image: csr1000v-16.12.02
+      image: csr1000v-16.09.04
 
   server:
     flavor: centos.small

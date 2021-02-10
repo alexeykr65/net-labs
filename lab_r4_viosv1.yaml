@@ -4,7 +4,7 @@ vm:
     vios:
       flavor: vios
       image: vios-158-3
-      init_img: vios_initv2
+      init_img: vios_initv3
     csr:
       flavor: csr1000v.small
       image: csr1000v-16.09.04

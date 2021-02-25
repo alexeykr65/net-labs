@@ -11,42 +11,57 @@ vm:
 #        csr1000v-16.12.02
 
   server:
-    flavor: centos.small
-    image: centos8.2
+    centos:
+      flavor: centos.small
+      image: centos8.2
 
 routers:
   R01:
-    type: csr    
+    type: vios    
     links: { 1, 2 }
   R02:
-    type: csr    
+    type: vios    
     links: { 2, 4, 3 }
   R03:
-    type: csr    
+    type: vios    
     links: { 2, 4, 5 }
   R04:
-    type: csr    
+    type: vios    
     links: { 3, 5, 6 }
 
 servers:
   SRV1:
+    type: centos
     links: { 1 }
   SRV2:
+    type: centos
     links: { 6 }
 
 networks:
   1:
     ipv4: 192.168.101.0/24
+    ipv6: fc00:101::/64
+    dhcp_srv: True
   2:
     ipv4: 10.131.11.0/24
+    ipv6: fc00:102::/64
+    dhcp_srv: True    
   3:
     ipv4: 10.131.12.0/24
+    ipv6: fc00:103::/64
+    dhcp_srv: True    
   4:
     ipv4: 10.131.13.0/24
+    ipv6: fc00:104::/64
+    dhcp_srv: True    
   5:
     ipv4: 172.16.10.0/24
+    ipv6: fc00:105::/64
+    dhcp_srv: True    
   6:
     ipv4: 192.168.103.0/24
+    ipv6: fc00:106::/64
+    dhcp_srv: True    
   # 7:
   #   ipv4: 192.168.102.0/24
   # 8:

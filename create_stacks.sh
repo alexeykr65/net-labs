@@ -5,6 +5,6 @@ rm -f net-stack/*.png
 echo "create new files "
 for f in *.yaml; do
     echo $f
-    generate_heatv2.py -d -g -l $f
+    gen-heatv3.py -l $f
 done
 

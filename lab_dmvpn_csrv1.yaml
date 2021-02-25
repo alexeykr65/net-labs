@@ -10,9 +10,10 @@ vm:
       image: csr1000v-16.09.04
 #        csr1000v-16.12.02
 
-  server:
-    flavor: centos.small
-    image: centos8.2
+  servers:
+    centos:
+      flavor: centos.small
+      image: centos8.2
 
 routers:
   R01:
@@ -33,15 +34,19 @@ routers:
 
 servers:
   SRV1:
+    type: centos
     links: { 1 }
   SRV2:
+    type: centos
     links: { 7 }
   SRV3:
+    type: centos
     links: { 6 }
 
 networks:
   1:
     ipv4: 192.168.101.0/24
+    ipv6: 2001:470:70e1:200::/64
   2:
     ipv4: 10.131.11.0/24
   3:

@@ -33,10 +33,13 @@ routers:
 
 servers:
   SRV1:
+    type: centos
     links: { 1 }
   SRV2:
+    type: centos
     links: { 7 }
   SRV3:
+    type: centos
     links: { 6 }
 
 networks:

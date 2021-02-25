@@ -10,8 +10,9 @@ vm:
       image: csr1000v-16.12.02
 
   server:
-    flavor: centos.small
-    image: centos8.2
+    centos:
+      flavor: centos.small
+      image: centos8.2
 
 routers:
   R01: 
@@ -46,7 +47,7 @@ routers:
     links: { 17 }
 
 
-servers:
+#servers:
 #   SRV1:
 #     links: { 1 }
 #   SRV2:

@@ -8,20 +8,20 @@ vm:
     csr:
       flavor: csr1000v.small
       image: csr1000v-16.12.02
-
   server:
-    flavor: centos.small
-    image: centos8.2
+    centos:
+      flavor: centos.small
+      image: centos8.2
 
 routers:
   R01: 
     type: vios
-    links: { 1 }
+    links: { 1,2 }
   R02:
     type: vios    
-    links: { 1 }
+    links: { 1, 2 }
 
-servers:
+#servers:
 #   SRV1:
 #     links: { 1 }
 #   SRV2:
@@ -32,9 +32,10 @@ servers:
 networks:
   1:
     ipv4: 10.131.1.0/24
-  # 2:
-  #   ipv4: 10.131.2.0/24
-  # 3:
+  2:
+#    ipv4: 10.131.2.0/24
+    ipv6: 2001:470:70e1:201::/64
+  #3:
   #   ipv4: 10.131.3.0/24
   # 4:
   #   ipv4: 10.131.4.0/24

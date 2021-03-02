@@ -24,8 +24,10 @@ routers:
 
 servers:
   SRV1:
+    type: centos
     links: { 1 }
   SRV2:
+    type: centos    
     links: { 3 }
   # SRV3:
   #   links: { 8 }

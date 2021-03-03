@@ -11,7 +11,7 @@ vm:
   server:
     centos:
       flavor: centos.small
-      image: centos8.2
+      image: centos8.3
 
 routers:
   R01: 

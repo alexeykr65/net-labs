@@ -12,7 +12,7 @@ vm:
 
   server:
     centos:
-      flavor: centos.small
+      flavor: centos.nano
       image: centos8.3
 
 routers:
